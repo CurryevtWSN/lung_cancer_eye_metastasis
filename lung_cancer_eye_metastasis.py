@@ -32,7 +32,7 @@ st.sidebar.markdown('##### For communication and cooperation, please contact wsh
 map = {'Squamous cell carcinoma':1,'Adenocarcinoma':2,'Large cell carcinoma':3,'Small cell lung cancer':4,'Other non-small cell lung cancer':5,'Unkown':6}
 Histopathological_type =map[Histopathological_type]
 # 数据读取，特征标注
-hp_train = pd.read_csv('E:\\Spyder_2022.3.29\\output\\machinel\\sy_output\\lung_cancer_em\\lung_cancer_githubdata.csv')
+hp_train = pd.read_csv('lung_cancer_githubdata.csv')
 hp_train['M'] = hp_train['M'].apply(lambda x : +1 if x==1 else 0)
 features =["Histopathological_type","AFP","CEA","CA_125","CA_199","CA_153",'CYFRA21_1','TPSA']
 target = 'M'
